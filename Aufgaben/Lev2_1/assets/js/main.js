@@ -38,16 +38,18 @@ console.log(over50);
 let table = document.createElement("table");
 let headline = ["Name", "PreisGrammEuro", "Veränderung"];
 
-// TODO iwie funzt der Head nicht wird gefixed
 let tableRowHead = document.createElement("tr");
 let tableHead1 = document.createElement("th");
 let tableHead2 = document.createElement("th");
 let tableHead3 = document.createElement("th");
-tableRowHead.appendChild(tableHead1, tableHead2, tableHead3);
+table.appendChild(tableRowHead);
+tableRowHead.appendChild(tableHead1);
+tableRowHead.appendChild(tableHead2);
+tableRowHead.appendChild(tableHead3);
 
 tableHead1.textContent = "Name";
-tableHead1.textContent = "PreisProGramm";
-tableHead1.textContent = "Veränderung";
+tableHead2.textContent = "PreisProGramm";
+tableHead3.textContent = "Veränderung";
 
 
 for (let i = 0; i < edelMetallPreise.length; i++) {
@@ -55,7 +57,6 @@ for (let i = 0; i < edelMetallPreise.length; i++) {
     let tableData = document.createElement("td");
     let tableData2 = document.createElement("td");
     let tableData3 = document.createElement("td");
-    let tableData4 = document.createElement("td");
     table.appendChild(tableRow);
     tableRow.appendChild(tableData);
     tableRow.appendChild(tableData2);
